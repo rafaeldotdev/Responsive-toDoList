@@ -1,0 +1,170 @@
+@import url(global.css);
+@import url(utility.css);
+
+/*.listWrapper{
+  margin-top:2rem;
+}
+
+.listWrapper h1{
+  margin-top: 1rem;
+}
+*/
+
+.listWrapper form {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.listWrapper span {
+  color: var(--color-brand);
+  font-size: var(--fs-sm);
+  font-style: normal;
+  font-weight: var(--fw-bold);
+  line-height: 1rem;
+}
+
+.listWrapper h1 {
+  font-style: normal;
+  font-weight: var(--fw-bold);
+  line-height: 2rem;
+  margin-top: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.addItemInput input {
+  width: 100%;
+  color: var(--content-primary);
+  font-family: Inter;
+  font-size: var(--fs-md);
+  line-height: 1.37rem;
+  height: 2.7rem;
+  padding: 0 1rem;
+  align-items: center;
+  border-radius: 0.8rem;
+  border: 2px solid var(--border-primary);
+  background: var(--background-secondary);
+}
+
+.btn-wrapper {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 10px 24px;
+  flex: 1 0 0;
+  align-self: stretch;
+  border-radius: 12px;
+  background: var(--color-brand);
+  border: 0;
+  color: var(--white);
+  font-size: var(--fs-md);
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.formListWrapper {
+  flex: 1;
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.checkbox-wrapper {
+  position: relative;
+
+  & [type="checkbox"] {
+    all: unset;
+    position: absolute;
+    inset: 0;
+  }
+
+  .checkbox-img {
+    flex: 0 0 1rem;
+    height: 1rem;
+    background-image: url(../assets/check-default.png);
+  }
+
+  &:hover,
+  &:focus-within {
+    .checkbox-img {
+      background-image: url(../assets/check-hover.png);
+    }
+  }
+
+  &:has(:checked) {
+    .checkbox-img {
+      background-image: url(../assets/check-selected.png);
+    }
+  }
+}
+
+.input-wrapper {
+  position: relative;
+  align-items: center;
+  border-radius: 12px;
+  background: var(--background-secondary);
+  padding: 0.75rem 1rem;
+  color: var(--content-secondary);
+  font-size: var(--fs-md);
+  font-weight: 500;
+  line-height: 24px;
+
+  .trashButton {
+    position: absolute;
+    background-image: url(../assets/trash.svg);
+    height: 1.2rem;
+    width: 1.2rem;
+    right: 16px;
+  }
+}
+
+.itemRemove {
+  background: var(--color-danger);
+  position: relative;
+  display: flex;
+  gap: 6px;
+  margin-top: 1rem;
+  padding: 10px 24px;
+  flex: 1 0 0;
+  border-radius: 12px;
+  border: 0;
+  color: var(--white);
+  font-size: var(--fs-md);
+  font-weight: 600;
+  line-height: 20px;
+
+  .warningIcon {
+    background-image: url(../assets/warning.svg);
+    height: 1.2rem;
+    width: 1.2rem;
+  }
+
+  .deleteIcon {
+    position: absolute;
+    background-image: url(../assets/delete.svg);
+    height: 1.2rem;
+    width: 1.2rem;
+    right: 12px;
+    cursor: pointer;
+  }
+}
+
+.displayNone {
+  display: none;
+}
+
+@media (width>=40em) {
+  .addItemInput {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .addItemInput input {
+    max-width: 400px;
+  }
+
+  .addItemInput button {
+    margin-top: 0;
+  }
+}
